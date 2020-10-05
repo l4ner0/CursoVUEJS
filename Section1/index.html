@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer proyecto</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="app-container" id="app">
+        <div class="controls">
+            <label class="controls__label" for="goalInput">Goal</label>
+            <input class="controls__input" type="text" id="goalInput" v-model="goal">
+            <button class="controls__button" id="btnAdd" v-on:click="addGoal">Add Goal</button>
+        </div>
+        <div class="list-container">
+            <ul id="listGoal">
+                <li v-for="goal in arrayGoals" :key="goal.id">{{ goal }}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
